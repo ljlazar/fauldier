@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 REQUIREMENTS = [
-    "IPython"
+    "IPython",
     "pandas",
     "numpy",
     "thermo",
@@ -44,4 +44,5 @@ setup(
     install_requires=REQUIREMENTS,
 
 )
+
 
