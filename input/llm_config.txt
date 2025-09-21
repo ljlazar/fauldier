@@ -1,0 +1,5 @@
+api_key=
+model=
+base_url=
+temperature=0.5
+top_p=1
