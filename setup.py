@@ -6,6 +6,7 @@ REQUIREMENTS = [
     "numpy",
     "thermo",
     "openai",
+    "tiktoken",
     "brightway2"
 ]
 from pathlib import Path
@@ -41,6 +42,7 @@ setup(
     install_requires=REQUIREMENTS,
 
 )
+
 
 
 
