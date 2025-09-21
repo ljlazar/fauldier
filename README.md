@@ -1,7 +1,7 @@
 
 # FAULDIER  
 *Framework for lArge langUage modeL assisteD lIfe cyclE inventoRy*
-!FAULDIER Logo
+!fauldier_logo
 
 ## Overview
 FAULDIER is an framework designed to automate e the transformation of heterogeneous input data into standardized formats for **Life Cycle Assessment (LCA)**. Leveraging **Large Language Models (LLMs)**, FAULDIER addresses the persistent challenges of aligning raw user inputs with Life Cycle Inventory (LCI) database nomenclature, enabling more efficient and accurate LCA modeling.
