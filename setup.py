@@ -16,7 +16,7 @@ from pathlib import Path
 from setuptools import setup, find_packages
 
 here = Path(__file__).parent
-long_description = (here / "README.md").read_text(encoding="utf-8"
+long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name='fauldier',
@@ -44,3 +44,4 @@ setup(
     install_requires=REQUIREMENTS,
 
 )
+
