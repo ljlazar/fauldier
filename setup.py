@@ -5,10 +5,7 @@ REQUIREMENTS = [
     "pandas",
     "numpy",
     "thermo",
-    "re",
     "openai",
-    "getpass",
-    "sys",
     "brightway2"
 ]
 from pathlib import Path
@@ -44,5 +41,6 @@ setup(
     install_requires=REQUIREMENTS,
 
 )
+
 
 
