@@ -2,63 +2,56 @@
 
 #
 
-FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**fe cycl**E** invento**R**y) aims to automate the transformation of heterogeneous input data into standardized formats for **Life Cycle Assessment (LCA)**, utilizing **Large Language Models (LLMs)**, FAULDIER addresses the persistent challenges of aligning raw user inputs with Life Cycle Inventory (LCI) database nomenclature, enabling more efficient and accurate LCA modeling.
+FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**fe cycl**E** invento**R**y) aims to automate the transformation of heterogeneous input data into standardized formats for **Life Cycle Assessment (LCA)**, utilizing **Large Language Models (LLMs)**.
 
-## Key Features
-- **Automated Data Harmonization**  
-  - Resolves naming inconsistencies between user inputs and LCI databases.  
-  - Classifies flow types and harmonizes units and locations.
-- **Error Handling & Robustness**  
-  - Corrects typographical errors and manages linguistic variations.  
-  - Handles location granularity mismatches and unit inconsistencies.
-- **Multilingual Support**  
-  - Processes inputs in multiple languages for global applicability.
-- **Proxy Selection**  
-  - Suggests suitable proxies for missing processes.
-- **Prospective Modeling & Uncertainty Analysis**  
-  - Facilitates advanced LCA applications by reducing manual preprocessing.
+## 🔑 Key Features
 
-## Why FAULDIER?
-Traditional rule-based mapping approaches often fail due to:
-- Linguistic variations and typos.
-- Unit and location mismatches.
-- Lack of adaptability to evolving data and terminology.
+- **Process and Elementary Flow Mapping**  
+  - Enables automated mapping of raw input data from a spreadsheet to the Brightway LCA software, with support for customizable, rule-based transformations to ensure compliance with database requirements.
 
-FAULDIER overcomes these limitations by using LLMs to interpret and map data intelligently, even under non-standardized conditions.
+- **LLM-Assisted Data Harmonization**  
+  - Automates mapping of non-standardized input data to Life Cycle Inventory (LCI) database requirements using Large Language Models (LLMs).
+  - Corrects **typographical errors**, resolves **linguistic variations**, and supports **multilingual inputs**.
+  - Converts units. 
+  - Harmonizes location granularity mismatches.
+  - Selects proxies for missing processes.
+  - 
+- **Dynamic Adaptation to Database Updates** (not tested)  
+  - LLM assistance enables the system to adapt to changes in database terminology, structural modifications, and integration with other databases.
 
-## Performance Highlights
-- **Name-Mapping Accuracy:** ~60% in real-world simulation scenarios.
-- **Unit Conversion Error:** <1% in most cases.
-- **Robustness:** Handles multilingual entries, typos, and inconsistent units effectively.
+- **Open & Transparent Implementation**  
+  Built with **open databases** and **open-weight LLMs**.
+
+- **Future-Oriented Design**  
+  Aims to support **prospective modeling**, and **software coupling**, enabling handling of uncertain and non-standardized data inputs. 
 
 ## Current Limitations
-- Database constraints and token limitations.
-- Performance variability across different LLMs.
+- Database constraints (license restrictions) and token limitations.
+- Performance variability across different LLMs and in between LLM runs.
+- Performance of open-weight LLMs.
 - Need for confidence metrics for mapped data.
 
 ## Future Directions
 - Expand testing across multiple LCI databases and use cases.
+- Develop pre-processing procedures.
 - Develop confidence scoring for mappings.
 - Explore integration with additional LLM architectures.
-- Improve scalability for large datasets.
 
 ## Getting Started
 ### Prerequisites
-- Python 3.10+
-- Access to an LLM API 
+- Access to an LLM API
 
+### Requirements
+- Python
+- LCI database such as forwast
 
-### Installation
+### 📦 Installation
+You can install the package directly from the GitHub repository, via pip or run the /example/LCA_LLM.ipynb directly on !https://mybinder.org/
+
 ```bash
-git clone https://github.com/your-org/fauldier.git
-cd fauldier
-pip install -r requirements.txt
-```
-
-### Usage
+pip install git+https://github.com/ljlazar/fauldier.git jupyterlab
 ```bash
-python fauldier.py --input your_data.csv --database ecoinvent
-```
+```bash
 
 ## Citation
 If you use FAULDIER in your research, please cite:
@@ -67,4 +60,4 @@ If you use FAULDIER in your research, please cite:
 ```
 
 ## License
-[MIT License](LICENSE)
+[BSD License](LICENSE) (c) 2025 Lukas Lazar
