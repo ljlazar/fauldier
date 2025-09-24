@@ -1,4 +1,4 @@
-<img src="fauldier_logo.svg" alt="alt text" width="30%" height="30%">
+<img src="fauldier_logo.svg" alt="alt text" width="35%" height="35%">
 
 #
 
