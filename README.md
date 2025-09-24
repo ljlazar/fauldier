@@ -4,6 +4,13 @@
 
 FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**fe cycl**E** invento**R**y) aims to automate the transformation of heterogeneous inventory data into standardized formats for **Life Cycle Assessment (LCA)**, utilizing **Large Language Models (LLMs)**.
 
+
+## Table of Contents
+- Key Features
+- Getting Started
+- License
+
+
 ## **Key Features**
 
 - **Process and Elementary Flow Mapping**  
