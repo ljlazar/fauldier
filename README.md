@@ -47,7 +47,7 @@ FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**
 
 ### 📦 Installation
 ### Option 1: with brightway2 or Activity Browser
-If you have [Brightway2](https://docs.brightway.dev/en/legacy/content/installation/installation.html) or [Activity Browser](https://github.com/LCA-ActivityBrowser/activity-browser), you only need to install [juptyerlab]( https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) [thermo] (https://github.com/CalebBell/thermo) and [openai-python](https://github.com/openai/openai-python) and ou can run the notebook in the example folder.
+If you have [Brightway2](https://docs.brightway.dev/en/legacy/content/installation/installation.html) or [Activity Browser](https://github.com/LCA-ActivityBrowser/activity-browser), you only need to install [juptyerlab(https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) [thermo](https://github.com/CalebBell/thermo) and [openai-python](https://github.com/openai/openai-python) and you can run the notebook in the example folder.
 
 ```bash
 pip install jupyterlab thermo openai
@@ -70,4 +70,4 @@ If you use FAULDIER in your research, please cite:
 ```
 
 ## License
-[BSD License](LICENSE) (c) 2025 Lukas Lazar
+[BSD License](LICENSE) &copy 2025 Lukas Lazar
