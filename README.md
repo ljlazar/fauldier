@@ -1,5 +1,5 @@
-
-![FAULDIER Logo](fauldier_logo.svg) 
+# FAULDIER
+![FAULDIER Logo](fauldier_logo_wo.svg) 
 *Framework for lArge langUage modeL assisteD lIfe cyclE inventoRy*
 
 ## Overview
