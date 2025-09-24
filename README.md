@@ -2,72 +2,87 @@
 
 #
 
-FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**fe cycl**E** invento**R**y) aims to automate the transformation of heterogeneous input data into standardized formats for **Life Cycle Assessment (LCA)**, utilizing **Large Language Models (LLMs)**.
+FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**fe cycl**E** invento**R**y) aims to automate the transformation of heterogeneous inventory data into standardized formats for **Life Cycle Assessment (LCA)**, utilizing **Large Language Models (LLMs)**.
 
-## 🔑 Key Features
+# FAULDIER: LLM-Assisted LCA Data Mapping
+
+## **Key Features**
 
 - **Process and Elementary Flow Mapping**  
-  - Enables automated mapping of raw input data from a spreadsheet to the Brightway LCA software, with support for customizable, rule-based transformations to ensure compliance with database requirements.
+  - Transforms incomplete inventory data from spreadsheets into a Brightway-compatible LCA database.  
+  - Supports customizable, rule-based transformation.
 
-- **LLM-Assisted Data Harmonization**  
-  - Automates mapping of non-standardized input data to Life Cycle Inventory (LCI) database requirements using Large Language Models (LLMs).
-  - Corrects **typographical errors**, resolves **linguistic variations**, and supports **multilingual inputs**.
-  - Converts units. 
-  - Harmonizes location granularity mismatches.
+- **LLM-Assisted Mapping and Harmonization**  
+  - Automates mapping of non-standardized input data to Life Cycle Inventory (LCI) database formats using **Large Language Models (LLMs)**.  
+  - Corrects typographical errors, resolves linguistic variations, and supports multilingual inputs.  
+  - Converts units and harmonizes location granularity mismatches.  
   - Selects proxies for missing processes.
-  - 
-- **Dynamic Adaptation to Database Updates** (not tested)  
-  - LLM assistance enables the system to adapt to changes in database terminology, structural modifications, and integration with other databases.
+
+- **Dynamic Adaptation to Databases and Database Updates** *(not tested)*  
+  - In principle, the LLM-based approach enables adaptation to changes in database terminology, structural modifications, and integration with other databases.
 
 - **Open & Transparent Implementation**  
-  Built with **open databases** and **open-weight LLMs**.
+  - Built with open software, databases and open-weight LLMs.
 
 - **Future-Oriented Design**  
-  Aims to support **prospective modeling**, and **software coupling**, enabling handling of uncertain and non-standardized data inputs. 
+  - Designed to support prospective modeling and software coupling, enabling handling of uncertain and non-standardized data inputs.
 
-## Current Limitations
-- Database constraints (license restrictions) and token limitations.
-- Performance variability across different LLMs and in between LLM runs.
-- Performance of open-weight LLMs.
-- Need for confidence metrics for mapped data.
+---
 
-## Future Directions
-- Expand testing across multiple LCI databases and use cases.
-- Develop pre-processing procedures.
-- Develop confidence scoring for mappings.
-- Explore integration with additional LLM architectures.
+## **Current Limitations**
+- Database constraints (e.g., license restrictions) and token limitations.  
+- Performance variability across different LLMs and between runs.  
+- Limited performance of open-weight LLMs.
+- Lack of confidence metrics for mapped data.
 
-## Getting Started
-### Prerequisites
-- API to an Large Language Model
+---
 
-### Requirements
-- Python
-- Life Cycle Inventory database
+## **Future Directions**
+- Broaden testing across multiple LCI databases and diverse use cases.  
+- Develop pre-processing strategy for improved efficiency.  
+- Implement confidence scoring for mappings.  
+- Explore integration with additional LLM architectures to improve mapping results.
 
-### 📦 Installation
-### Option 1: with brightway2 or Activity Browser
-If you have [Brightway2](https://docs.brightway.dev/en/legacy/content/installation/installation.html) or [Activity Browser](https://github.com/LCA-ActivityBrowser/activity-browser), you only need to install [juptyerlab(https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) [thermo](https://github.com/CalebBell/thermo) and [openai-python](https://github.com/openai/openai-python) and you can run the notebook in the example folder.
+---
 
+## **Getting Started**
+
+### **Prerequisites**
+- Access to an LLM API.  
+
+### **Requirements**
+- Python (tested with **3.10**)  
+- Life Cycle Inventory database (tested with **FORWAST**)  
+
+---
+
+### Installation
+
+#### Option 1: With brightway2 environment
+If you already have [Brightway2](https://docs.brightway.dev/en/legacy/content/installation/installation.html) or [Activity Browser](https://github.com/LCA-ActivityBrowser/activity-browser) installed, you only need to add [JuptyerLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html), [thermo](https://github.com/CalebBell/thermo), and [openai-python](https://github.com/openai/openai-python.
 ```bash
 pip install jupyterlab thermo openai
 ```
-
-### Option 2: from scratch
-You can install the package including dependencies directly from the GitHub repository, via pip or run the /example/LCA_LLM.ipynb. 
+#### Option 2: Install from GitHub
+You can install the package and its main dependencies directly from the GitHub repository using pip.
 ```bash
 pip install git+https://github.com/ljlazar/fauldier.git jupyterlab
 ```
 
-### Option 3: run on binder
-You can run the the /example/LCA_LLM.ipynb directly on [binder](https://mybinder.org/). Be aware not to save your LLM API_key if using binder (you have to put in your API_key several times unfortunately, if you do not save it).
+#### Option 3: Run on binder
+Run the example notebook (/example/LCA_LLM.ipyn) directly in a cloud environment with [Binder](https://mybinder.org/). No local installation is required.
 
+### First Steps
+To see an example, run the `LCA_LLM.ipynb` notebook located in the `/example/` directory.
+
+The notebook includes instructions on how to restore the FORWAST database if you do not have it installed (this can also be done via Brightway or the Activity Browser: Import database > Import remote data > Forwast).
 
 ## Citation
 If you use FAULDIER in your research, please cite:
 ```
 [Reference coming soon]
 ```
+Thank you!
 
 ## License
 [BSD-3-Clause](LICENSE) &copy; 2025 Lukas Lazar
