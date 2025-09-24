@@ -4,8 +4,6 @@
 
 FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**fe cycl**E** invento**R**y) aims to automate the transformation of heterogeneous inventory data into standardized formats for **Life Cycle Assessment (LCA)**, utilizing **Large Language Models (LLMs)**.
 
-# FAULDIER: LLM-Assisted LCA Data Mapping
-
 ## **Key Features**
 
 - **Process and Elementary Flow Mapping**  
@@ -27,23 +25,17 @@ FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**
 - **Future-Oriented Design**  
   - Designed to support prospective modeling and software coupling, enabling handling of uncertain and non-standardized data inputs.
 
----
-
 ## **Current Limitations**
 - Database constraints (e.g., license restrictions) and token limitations.  
 - Performance variability across different LLMs and between runs.  
 - Limited performance of open-weight LLMs.
 - Lack of confidence metrics for mapped data.
 
----
-
 ## **Future Directions**
 - Broaden testing across multiple LCI databases and diverse use cases.  
 - Develop pre-processing strategy for improved efficiency.  
 - Implement confidence scoring for mappings.  
 - Explore integration with additional LLM architectures to improve mapping results.
-
----
 
 ## **Getting Started**
 
@@ -53,8 +45,6 @@ FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**
 ### **Requirements**
 - Python (tested with **3.10**)  
 - Life Cycle Inventory database (tested with **FORWAST**)  
-
----
 
 ### Installation
 
