@@ -12,6 +12,9 @@ FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**
 - [License](#license)
 
 ## Description
+For a comprehensive overview, please refer to the following publication:  
+** **  
+
 ### Key Features
 
 - **Process and Elementary Flow Mapping**  
@@ -19,7 +22,7 @@ FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**
   - Supports customizable, rule-based transformation.
 
 - **LLM-Assisted Mapping and Harmonization**  
-  - Automates mapping of non-standardized input data to Life Cycle Inventory (LCI) database formats using **Large Language Models (LLMs)**.  
+  - Automates mapping of non-standardized input data to Life Cycle Inventory (LCI) database formats using LLMs.  
   - Corrects typographical errors, resolves linguistic variations, and supports multilingual inputs.  
   - Converts units and harmonizes location granularity mismatches.  
   - Selects proxies for missing processes.
@@ -57,7 +60,7 @@ FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**
 ### Installation
 
 #### Option 1: With brightway2 environment
-If you already have [Brightway2](https://docs.brightway.dev/en/legacy/content/installation/installation.html) or [Activity Browser](https://github.com/LCA-ActivityBrowser/activity-browser) installed, you only need to add [JuptyerLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html), [thermo](https://github.com/CalebBell/thermo), and [openai-python](https://github.com/openai/openai-python.
+If you already have [Brightway2](https://docs.brightway.dev/en/legacy/content/installation/installation.html) or [Activity Browser](https://github.com/LCA-ActivityBrowser/activity-browser) installed, you only need to add [JuptyerLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html), [thermo](https://github.com/CalebBell/thermo), and [openai-python](https://github.com/openai/openai-python).
 ```bash
 pip install jupyterlab thermo openai
 ```
@@ -68,7 +71,7 @@ pip install git+https://github.com/ljlazar/fauldier.git jupyterlab
 ```
 
 #### Option 3: Run on binder
-Run the example notebook (/example/LCA_LLM.ipyn) directly in a cloud environment with [Binder](https://mybinder.org/). No local installation is required.
+Run the example notebook '/example/LCA_LLM.ipyn' directly in a cloud environment with [Binder](https://mybinder.org/). No local installation is required.
 
 ### First Steps
 To see an example, run the `LCA_LLM.ipynb` notebook located in the `/example/` directory.
