@@ -76,12 +76,5 @@ To see an example, run the `LCA_LLM.ipynb` notebook located in the `/example/` d
 
 The notebook includes instructions on how to restore the FORWAST database if you do not have it installed (this can also be done via Brightway or the Activity Browser: Import database > Import remote data > Forwast).
 
-## Citation
-If you use FAULDIER in your research, please cite:
-```
-[Reference coming soon]
-```
-Thank you!
-
 ## License
 [BSD-3-Clause](LICENSE) &copy; 2025 Lukas Lazar
