@@ -66,7 +66,7 @@ You can run the the /example/LCA_LLM.ipynb directly on [binder](https://mybinder
 ## Citation
 If you use FAULDIER in your research, please cite:
 ```
-[Your Citation Here]
+[Reference coming soon]
 ```
 
 ## License
