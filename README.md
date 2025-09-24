@@ -13,7 +13,9 @@ FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**
 
 ## Description
 For a comprehensive overview, please refer to the following publication:  
-** **  
+```
+[Reference coming soon]
+```
 
 ### Key Features
 
