@@ -1,6 +1,6 @@
 <img src="fauldier_logo.svg" alt="alt text" width="50%" height="50%">
 
-span style="font-size:24px;">This is large text
+<span style="font-size:24px;">This is large text
 **F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**fe cycl**E** invento**R**y
 </span>
 
