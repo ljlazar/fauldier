@@ -1,5 +1,5 @@
 # FAULDIER
-<img src="fauldier_logo_wo.svg" alt="alt text" width="50%" height="50%">
+<img src="fauldier_logo_wo.svg" alt="alt text" width="20%" height="20%">
 *Framework for lArge langUage modeL assisteD lIfe cyclE inventoRy*
 
 ## Overview
