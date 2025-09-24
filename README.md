@@ -6,7 +6,7 @@ FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**
 
 
 ## Table of Contents
-- Key Features
+- [Key Features](#key-features)
 - Getting Started
 - License
 
