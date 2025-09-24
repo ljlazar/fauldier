@@ -1,5 +1,6 @@
 # FAULDIER
 *Framework for lArge langUage modeL assisteD lIfe cyclE inventoRy*
+
 <img src="fauldier_logo_wo.svg" alt="alt text" width="20%" height="20%">
 
 ## Overview
