@@ -43,14 +43,14 @@ FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**
 
 ### Requirements
 - Python
-- LCI database such as FORWAST
+- Life Cycle Inventory database
 
 ### 📦 Installation
 ### Option 1: with brightway2 or Activity Browser
-If you have brightway or Activity Browser and Jupyter lab already installed, you only need to install Thermo and openai and can run the notebook in the example folder.
+If you have [Brightway2](https://docs.brightway.dev/en/legacy/content/installation/installation.html) or [Activity Browser](https://github.com/LCA-ActivityBrowser/activity-browser), you only need to install [juptyerlab]( https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) [thermo] (https://github.com/CalebBell/thermo) and [openai-python](https://github.com/openai/openai-python) and ou can run the notebook in the example folder.
 
 ```bash
-pip install thermo openai
+pip install jupyterlab thermo openai
 ```
 
 ### Option 2: from scratch
@@ -60,7 +60,7 @@ pip install git+https://github.com/ljlazar/fauldier.git jupyterlab
 ```
 
 ### Option 3: run on binder
-You can run the the /example/LCA_LLM.ipynb directly on binder !https://mybinder.org/. Be aware not to save your LLM API_key if using binder (you have to put in your API_key several times unfortunately, if you do not save it).
+You can run the the /example/LCA_LLM.ipynb directly on [binder](https://mybinder.org/). Be aware not to save your LLM API_key if using binder (you have to put in your API_key several times unfortunately, if you do not save it).
 
 
 ## Citation
