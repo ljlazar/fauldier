@@ -105,8 +105,8 @@ def compare_results(df1, df2, float_tolerance=1e-8):
 
     #display(HTML("<h5>Comparison</h5>"))
     #display(result_df.to_frame(name="Comparison"))
-    print(f"Mapped entries: {num_equal}")
-    print(f"Unmapped entries: {total - num_equal}")
+    print(f"Mapped entries: {total - num_equal}")
+    print(f"Unmapped entries: {num_equal}")
     print(f"Simplified mapping rate: {matching_rate:.0f}%")
     return result_df
 
@@ -132,7 +132,7 @@ def prompt_config(key: str, prompt: str, secret: bool = False) -> str:
     if not v:
         raise RuntimeError(f"No value provided for '{key}'.")
 
-    save_response = input(f"Do you want to save '{key}' to a file? (yes/no): ").strip().lower()
+    save_response = input(f"Do you want to save '{key}' to a file (not secure!)? (yes/no): ").strip().lower()
     if save_response in ['yes', 'y']:
         file_path = os.path.join('..', 'input', 'llm_config.txt')
 
