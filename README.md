@@ -6,12 +6,13 @@ FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**
 
 
 ## Table of Contents
-- [Key Features](#key-features)
-- Getting Started
-- License
+- [Description](#description)
+- [Getting Started](#getting-started)
+- [Citation](#citation)
+- [License](#license)
 
-
-## Key Features
+## Description
+### Key Features
 
 - **Process and Elementary Flow Mapping**  
   - Transforms incomplete inventory data from spreadsheets into a Brightway-compatible LCA database.  
@@ -32,13 +33,13 @@ FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**
 - **Future-Oriented Design**  
   - Designed to support prospective modeling and software coupling, enabling handling of uncertain and non-standardized data inputs.
 
-## **Current Limitations**
+### **Current Limitations**
 - Database constraints (e.g., license restrictions) and token limitations.  
 - Performance variability across different LLMs and between runs.  
 - Limited performance of open-weight LLMs.
 - Lack of confidence metrics for mapped data.
 
-## **Future Directions**
+### **Future Directions**
 - Broaden testing across multiple LCI databases and diverse use cases.  
 - Develop pre-processing strategy for improved efficiency.  
 - Implement confidence scoring for mappings.  
