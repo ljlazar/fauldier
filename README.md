@@ -39,19 +39,29 @@ FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**
 
 ## Getting Started
 ### Prerequisites
-- Access to an LLM API
+- API to an Large Language Model
 
 ### Requirements
 - Python
-- LCI database such as forwast
+- LCI database such as FORWAST
 
 ### 📦 Installation
-You can install the package directly from the GitHub repository, via pip or run the /example/LCA_LLM.ipynb directly on !https://mybinder.org/
+### Option 1: with brightway2 or Activity Browser
+If you have brightway or Activity Browser and Jupyter lab already installed, you only need to install Thermo and openai and can run the notebook in the example folder.
 
+```bash
+pip install thermo openai
+```bash
+
+### Option 2: from scratch
+You can install the package including dependencies directly from the GitHub repository, via pip or run the /example/LCA_LLM.ipynb. 
 ```bash
 pip install git+https://github.com/ljlazar/fauldier.git jupyterlab
 ```bash
-```bash
+
+### Option 3: run on binder
+You can run the the /example/LCA_LLM.ipynb directly on binder !https://mybinder.org/. Be aware not to save your LLM API_key if using binder (you have to put in your API_key several times unfortunately, if you do not save it).
+
 
 ## Citation
 If you use FAULDIER in your research, please cite:
