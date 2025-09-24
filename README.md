@@ -12,10 +12,6 @@ FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**
 - [License](#license)
 
 ## Description
-For a comprehensive overview, please refer to the following publication:  
-```
-[Reference coming soon]
-```
 
 ### Key Features
 
@@ -50,12 +46,15 @@ For a comprehensive overview, please refer to the following publication:
 - Implement confidence scoring for mappings.  
 - Explore integration with additional LLM architectures to improve mapping results.
 
+For a comprehensive overview, please refer to the following publication:  
+```
+[Reference coming soon]
+```
+
 ## Getting Started
 
-### **Prerequisites**
-- Access to an LLM API.  
-
 ### **Requirements**
+- Access to an LLM API.  
 - Python (tested with **3.10**)  
 - Life Cycle Inventory database (tested with **FORWAST**)  
 
