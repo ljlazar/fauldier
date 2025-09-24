@@ -11,7 +11,7 @@ FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**
 - License
 
 
-## **Key Features**
+## Key Features
 
 - **Process and Elementary Flow Mapping**  
   - Transforms incomplete inventory data from spreadsheets into a Brightway-compatible LCA database.  
@@ -44,7 +44,7 @@ FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**
 - Implement confidence scoring for mappings.  
 - Explore integration with additional LLM architectures to improve mapping results.
 
-## **Getting Started**
+## Getting Started
 
 ### **Prerequisites**
 - Access to an LLM API.  
