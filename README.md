@@ -70,4 +70,4 @@ If you use FAULDIER in your research, please cite:
 ```
 
 ## License
-[BSD License](LICENSE) &copy 2025 Lukas Lazar
+[BSD-3-Clause](LICENSE) &copy; 2025 Lukas Lazar
