@@ -36,12 +36,15 @@ setup(
         "Repository": "https://github.com/ljlazar/fauldier.git",
     },
     packages=["fauldier"],
+    package_data={
+        "fauldier": ["data/**/*"]},
     long_description=long_description,
     long_description_content_type="text/markdown",
     classifiers=[],
     install_requires=REQUIREMENTS,
 
 )
+
 
 
 
