@@ -69,7 +69,7 @@ pip install git+https://github.com/ljlazar/fauldier.git jupyterlab
 ```
 
 #### Option 3: Run on binder
-Run the example notebook '/example/LCA_LLM.ipyn' directly in a cloud environment with [Binder](https://mybinder.org/). No local installation is required.
+Run the example notebook '/example/LCA_LLM.ipynb' directly in a cloud environment with [Binder](https://mybinder.org/). No local installation is required.
 
 ### First Steps
 To see an example, run the `LCA_LLM.ipynb` notebook located in the `/example/` directory.
