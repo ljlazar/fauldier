@@ -1,4 +1,5 @@
 from setuptools import setup, find_packages
+from pathlib import Path
 
 REQUIREMENTS = [
     "IPython"
@@ -32,7 +33,7 @@ setup(
         "Repository": "https://github.com/ljlazar/fauldier.git",
     },
     packages=["fauldier"],
-    long_description=read("README.md"),
+    long_description=(Path(__file__).parent / "README.md").read_text(encoding='utf-8'),
     long_description_content_type="text/markdown",
     classifiers=[],
     install_requires=REQUIREMENTS,
