@@ -24,7 +24,7 @@ def setup_input_output():
     output_dir = os.path.join(os.getcwd(), 'output')
 
     if not os.path.exists(input_dir):
-        input_templates = resources.files(__package__) / 'input'
+        input_templates = resources.files('fauldier') / 'input'
         with resources.as_file(input_templates) as template_path:
             shutil.copytree(str(template_path), input_dir)
 
