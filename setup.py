@@ -6,10 +6,7 @@ REQUIREMENTS = [
     "pandas",
     "numpy",
     "thermo",
-    "re",
     "openai",
-    "getpass",
-    "sys",
     "brightway2"
 ]
 
