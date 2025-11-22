@@ -93,10 +93,9 @@ def process_dataframe(df, product_list):
                 if not (df['DESCRIPTION'] == 'no avoided burden').any():  # Statement in sheet if no avoided burden
                     df.at[index, 'Unnamed: 1'] = 'INPUTS'
                     df.at[index, 'QUANTITY'] *= -1
+                    product_list.append(df.at[index, 'FLOW NAME'])  # add product to product list
 
                 df = df[df['DESCRIPTION'] != "no avoided burden"]  # drop by-product rows
-
-            product_list.append(df.at[index, 'FLOW NAME'])  # add product to product list
 
     return df, product_list
 

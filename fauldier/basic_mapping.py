@@ -77,6 +77,12 @@ def ecoinvent_3_10_names(LCI_sheet_modify):
         'market for acetic acid', 'market for acetic acid, without water, in 98% solution state',  # regex=True
     )
 
+    # hexamethylenediamine
+    LCI_sheet_modify.loc[
+        LCI_sheet_modify['name'].eq('market for hexamethylenediamine'),
+        'ORIGIN'
+    ] = 'GLO'
+
     return LCI_sheet_modify
 
 

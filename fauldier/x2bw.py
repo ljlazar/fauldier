@@ -16,9 +16,9 @@ def x2bw_transformation(activity_database_name,
                         xls_file_path,
                         excluded_entries,
                         background_database_name,
-                        LLM_mapping,
-                        BG_DB_activities,
-                        biosphere_flows,
+                        LLM_mapping=False,
+                        BG_DB_activities=[],
+                        biosphere_flows=[],
                         ecoinvent_version='3.10',
                         ):
     """
@@ -216,6 +216,7 @@ def x2bw_transformation(activity_database_name,
     final_bw_input_sheet = p.merge_sheets(LCI_sheet, bw_example_sheets, sheet_names)
 
     # Save final sheet to spreadsheet, which can be used as input file to brightway2
-    file_path = os.path.abspath(os.path.join(module_dir, '..', 'output', 'bw_input_sheet.xlsx'))
+    input_dir, output_dir = h.setup_input_output()
+    file_path = os.path.abspath(os.path.join(output_dir, 'bw_input_sheet.xlsx'))
     final_bw_input_sheet.to_excel(file_path, index=False, header=False)
     h.display_dataframe_scroll(final_bw_input_sheet)

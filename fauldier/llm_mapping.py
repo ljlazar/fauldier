@@ -90,7 +90,8 @@ def prompt_LLM(user_inputs, process_list_text, biosphere_list_text, inputs_text)
     """
 
     # Read the prompt from the text file
-    file_path = os.path.abspath(os.path.join('..', 'input', 'llm_prompt.txt'))
+    input_dir, output_dir = h.setup_input_output()
+    file_path = os.path.abspath(os.path.join(input_dir, 'llm_prompt.txt'))
     with open(file_path, 'r') as file:
         prompt_txt = file.read()
 
@@ -99,7 +100,7 @@ def prompt_LLM(user_inputs, process_list_text, biosphere_list_text, inputs_text)
                                inputs_text=inputs_text)
 
     # Read the configuration from the config file
-    file_path = os.path.abspath(os.path.join('..', 'input', 'llm_config.txt'))
+    file_path = os.path.abspath(os.path.join(input_dir, 'llm_config.txt'))
     config = h.read_config(file_path) or {}
 
     # Prompt for each missing entry

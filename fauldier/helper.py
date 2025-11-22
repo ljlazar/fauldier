@@ -2,8 +2,10 @@ import numpy as np
 import pandas as pd
 import getpass
 import os
+import shutil
 
 from IPython.display import display, HTML
+from importlib import resources
 
 
 def display_dataframe_scroll(df, max_height=400):
@@ -14,6 +16,22 @@ def display_dataframe_scroll(df, max_height=400):
     </div>
     """
     display(HTML(html))
+
+
+def setup_input_output():
+    """Setup input/output folders. Copies input templates on first run only."""
+    input_dir = os.path.join(os.getcwd(), 'input')
+    output_dir = os.path.join(os.getcwd(), 'output')
+
+    if not os.path.exists(input_dir):
+        input_templates = resources.files(__package__) / 'input'
+        with resources.as_file(input_templates) as template_path:
+            shutil.copytree(str(template_path), input_dir)
+
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir, exist_ok=True)
+
+    return input_dir, output_dir
 
 
 def read_config(file_path):
