@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from pathlib import Path
 
 REQUIREMENTS = [
-    "IPython"
+    "IPython",
     "pandas",
     "numpy",
     "thermo",
