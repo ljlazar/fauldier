@@ -20,8 +20,20 @@ def display_dataframe_scroll(df, max_height=400):
 
 def setup_input_output():
     """Setup input/output folders. Copies input templates on first run only."""
-    input_dir = os.path.join(os.getcwd(), 'input')
-    output_dir = os.path.join(os.getcwd(), 'output')
+
+    # Detect if running on MyBinder
+    is_binder = 'BINDER_SERVICE_HOST' in os.environ or os.getenv('USER') == 'jovyan'
+
+    if is_binder:
+        # On MyBinder, use HOME directory which is always writable
+        base_dir = os.environ.get('HOME', '/home/jovyan')
+    else:
+        # Locally, use current working directory
+        base_dir = os.getcwd()
+
+    output_dir = os.path.join(base_dir, 'output')
+    input_dir = os.path.join(base_dir, 'input')
+
 
     if not os.path.exists(input_dir):
         input_templates = resources.files('fauldier') / 'input'
