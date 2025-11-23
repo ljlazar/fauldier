@@ -1,5 +1,4 @@
 from setuptools import setup, find_packages
-from pathlib import Path
 
 REQUIREMENTS = [
     "IPython",
@@ -7,8 +6,15 @@ REQUIREMENTS = [
     "numpy",
     "thermo",
     "openai",
+    "tiktoken",
     "brightway2"
 ]
+from pathlib import Path
+
+from setuptools import setup, find_packages
+
+here = Path(__file__).parent
+long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name='fauldier',
@@ -30,8 +36,12 @@ setup(
         "Repository": "https://github.com/ljlazar/fauldier.git",
     },
     packages=["fauldier"],
-    long_description=(Path(__file__).parent / "README.md").read_text(encoding='utf-8'),
+    package_data={
+        "fauldier": ["data/**/*"]},
+    include_package_data=True,
+    long_description=long_description,
     long_description_content_type="text/markdown",
     classifiers=[],
     install_requires=REQUIREMENTS,
+
 )
