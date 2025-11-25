@@ -163,9 +163,11 @@ def prompt_config(key: str, prompt: str, secret: bool = False) -> str:
     if not v:
         raise RuntimeError(f"No value provided for '{key}'.")
 
-    save_response = input(f"Do you want to save '{key}' to a file (not secure!)? (yes/no): ").strip().lower()
+    save_response = input(
+        f"Do you want to save '{key}' to a file (not secure if not running locally!)? (yes/no): ").strip().lower()
     if save_response in ['yes', 'y']:
-        file_path = os.path.join('..', 'input', 'llm_config.txt')
+        input_dir, output_dir = setup_input_output()
+        file_path = os.path.join(input_dir, 'llm_config.txt')
 
         if os.path.exists(file_path):
             with open(file_path, 'r') as f:
