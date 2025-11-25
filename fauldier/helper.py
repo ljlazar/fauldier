@@ -28,8 +28,11 @@ def setup_input_output():
         # On MyBinder, use HOME directory which is always writable
         base_dir = os.environ.get('HOME', '/home/jovyan')
     else:
-        # Locally, use current working directory
-        base_dir = os.getcwd()
+        # Locally, use user directory with platformdirs
+        from platformdirs import user_data_dir
+        base_dir = user_data_dir('fauldier')
+        # Create base directory if it doesn't exist
+        os.makedirs(base_dir, exist_ok=True)
 
     output_dir = os.path.join(base_dir, 'output')
     input_dir = os.path.join(base_dir, 'input')
