@@ -6,7 +6,6 @@ import shutil
 
 from IPython.display import display, HTML
 from importlib import resources
-from platformdirs import user_data_dir
 
 
 def display_dataframe_scroll(df, max_height=400):
@@ -30,7 +29,7 @@ def setup_input_output():
         base_dir = os.environ.get('HOME', '/home/jovyan')
     else:
         # Locally, use user directory with platformdirs
-        base_dir = user_data_dir('fauldier')
+        base_dir = os.path.join(os.path.expanduser('~'), 'fauldier')
         # Create base directory if it doesn't exist
         os.makedirs(base_dir, exist_ok=True)
 
