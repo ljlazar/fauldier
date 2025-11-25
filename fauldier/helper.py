@@ -6,6 +6,7 @@ import shutil
 
 from IPython.display import display, HTML
 from importlib import resources
+from platformdirs import user_data_dir
 
 
 def display_dataframe_scroll(df, max_height=400):
@@ -29,7 +30,6 @@ def setup_input_output():
         base_dir = os.environ.get('HOME', '/home/jovyan')
     else:
         # Locally, use user directory with platformdirs
-        from platformdirs import user_data_dir
         base_dir = user_data_dir('fauldier')
         # Create base directory if it doesn't exist
         os.makedirs(base_dir, exist_ok=True)
@@ -37,9 +37,8 @@ def setup_input_output():
     output_dir = os.path.join(base_dir, 'output')
     input_dir = os.path.join(base_dir, 'input')
 
-
     if not os.path.exists(input_dir):
-        input_templates = resources.files('fauldier') / 'input'
+        input_templates = resources.files('fauldier') / 'data' / 'input'
         with resources.as_file(input_templates) as template_path:
             shutil.copytree(str(template_path), input_dir)
 
