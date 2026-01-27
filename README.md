@@ -90,7 +90,7 @@ jupyter lab
 Run the example notebook '/example/LCA_LLM.ipynb' directly in a cloud environment with [Binder](https://mybinder.org/). No local installation is required.
 
 ### First Steps
-To see an example, run the `LCA_LLM.ipynb` notebook located in the [example](https://github.com/ljlazar/fauldier/tree/main/example)` directory.
+To see an example, run the `LCA_LLM.ipynb` notebook located in the [example](https://github.com/ljlazar/fauldier/tree/main/example) directory.
 
 The notebook includes instructions on how to restore the FORWAST database if you do not have it installed (this can also be done via Brightway or the Activity Browser: Import database > Import remote data > Forwast).
 
