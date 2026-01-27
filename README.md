@@ -62,17 +62,35 @@ If you already have [Brightway2](https://docs.brightway.dev/en/legacy/content/in
 ```bash
 pip install jupyterlab thermo openai
 ```
-#### Option 2: Install from GitHub
-You can install the package and its main dependencies directly from the GitHub repository using pip.
+and install fauldier via git:
 ```bash
 pip install git+https://github.com/ljlazar/fauldier.git jupyterlab
 ```
+
+#### Option 2: From scratch
+If you don't have a brightway2 environment or want to install fauldier in a separate environment, create a new conda environment:
+```bash
+conda create -n fauldier python=3.10 git
+```
+activate it
+```bash
+conda activate fauldier
+```
+and install the package and its main dependencies directly from the GitHub repository using pip.
+```bash
+pip install git+https://github.com/ljlazar/fauldier.git jupyterlab thermo openai brightway2
+```
+You can run either the example notebook or your own one in jupyter lab:
+```bash
+jupyter lab
+```
+
 
 #### Option 3: Run on binder
 Run the example notebook '/example/LCA_LLM.ipynb' directly in a cloud environment with [Binder](https://mybinder.org/). No local installation is required.
 
 ### First Steps
-To see an example, run the `LCA_LLM.ipynb` notebook located in the `/example/` directory.
+To see an example, run the `LCA_LLM.ipynb` notebook located in the [example](https://github.com/ljlazar/fauldier/tree/main/example)` directory.
 
 The notebook includes instructions on how to restore the FORWAST database if you do not have it installed (this can also be done via Brightway or the Activity Browser: Import database > Import remote data > Forwast).
 
