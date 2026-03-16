@@ -13,7 +13,7 @@ FAULDIER (**F**ramework for l**A**rge lang**U**age mode**L** assiste**D** l**I**
 ## Description
 For a comprehensive overview, please refer to the following publication:  
 ```
-[Reference coming soon]
+Lukas Lazar, Do you speak LCA? FAULDIER: A framework for large language model assisted Life Cycle Inventories in Life Cycle Assessment, SoftwareX, Volume 34, 2026, 102602, ISSN 2352-7110, https://doi.org/10.1016/j.softx.2026.102602.
 ```
 ### Key Features
 
