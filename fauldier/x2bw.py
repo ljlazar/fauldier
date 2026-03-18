@@ -133,12 +133,10 @@ def x2bw_transformation(activity_database_name,
         LCI_sheet_modify['amount'] = LCI_sheet_modify['QUANTITY']
 
         # Non LLM mapping
+
+        # (Common) Names
         if LLM_mapping == False:
             LCI_sheet_modify = m.map_common_names(LCI_sheet_modify)
-
-            # modify ecoinvent 3.10 specific names (if sheet input is 3.11)
-            if ecoinvent_version == '3.10':
-                LCI_sheet_modify = m.ecoinvent_3_10_names(LCI_sheet_modify)
 
         # Units
         LCI_sheet_modify['unit'] = LCI_sheet_modify['UNIT'].apply(m.map_unit)
@@ -171,6 +169,15 @@ def x2bw_transformation(activity_database_name,
         LCI_sheet_modify['database'] = LCI_sheet_modify.apply(m.determine_database, axis=1,
                                                                                       args=(background_database_name,
                                                                                             activity_database_name))
+        # Ecoinvent versions
+        if LLM_mapping == False:
+            # modify ecoinvent 3.10 specific names (if sheet input is 3.11)
+            if ecoinvent_version == '3.10':
+                LCI_sheet_modify = m.ecoinvent_3_10_names(LCI_sheet_modify)
+    
+            # modify ecoinvent 3.12 specific names
+            if ecoinvent_version == '3.12':
+                LCI_sheet_modify = m.ecoinvent_3_12_names(LCI_sheet_modify)
 
         # Others
         LCI_sheet_modify['uncertainty type'] = None

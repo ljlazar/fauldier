@@ -80,8 +80,177 @@ def ecoinvent_3_10_names(LCI_sheet_modify):
     # hexamethylenediamine
     LCI_sheet_modify.loc[
         LCI_sheet_modify['name'].eq('market for hexamethylenediamine'),
-        'ORIGIN'
+        'location'
     ] = 'GLO'
+
+    return LCI_sheet_modify
+
+
+def ecoinvent_3_12_names(LCI_sheet_modify):
+    """
+    Adjust names for ecoinvent 3.12 compatibility.
+
+    Args:
+        LCI_sheet_modify (pd.DataFrame): DataFrame with process names
+
+    Returns:
+        pd.DataFrame: Modified DataFrame with ecoinvent 3.10-compliant names
+    """
+
+    LCI_sheet_modify.loc[
+        (LCI_sheet_modify['name'].eq('market for ethane')) &
+        (LCI_sheet_modify['location'].eq('GLO')),
+        'location'
+    ] = 'RoW'
+
+    LCI_sheet_modify.loc[
+        (LCI_sheet_modify['name'].eq('market for methanol')) &
+        (LCI_sheet_modify['location'].eq('RER')),
+        'location'
+    ] = 'RER w/o RU'
+
+    LCI_sheet_modify['name'] = LCI_sheet_modify['name'].str.replace(
+        'market for chemical, organic', 'market for chemical, organic, unspecified',
+    )
+
+    LCI_sheet_modify['categories'] = LCI_sheet_modify['categories'].str.replace(
+        r".*natural resource.*in water.*", "natural resource::in water",
+         regex=True
+    )
+
+    LCI_sheet_modify['location'] = LCI_sheet_modify['location'].str.replace(
+        'IAI Area, EU27 & EFTA', 'IAI Area, Western and Central Europe',
+    )
+
+
+    LCI_sheet_modify['categories'] = LCI_sheet_modify['categories'].str.replace(
+        r".*air.*urban air close to ground.*", "air::urban air close to ground",
+        regex=True
+    )
+
+    LCI_sheet_modify['categories'] = LCI_sheet_modify['categories'].str.replace(
+        r".*air.*non-urban air or from high stacks.*", "air::non-urban air or from high stacks",
+        regex=True
+    )
+
+    LCI_sheet_modify['categories'] = LCI_sheet_modify['categories'].str.replace(
+        r".*natural resource.*in air.*", "natural resource::in air",
+        regex=True
+    )
+
+    LCI_sheet_modify.loc[
+        (LCI_sheet_modify['name'].eq('market for polypropylene, granulate')) &
+        (LCI_sheet_modify['location'].eq('GLO')),
+        'location'
+    ] = 'RER' # No GLO and most regions covered, thus RoW would not include regions such as RER
+
+    LCI_sheet_modify.loc[
+        (LCI_sheet_modify['name'].eq('market group for transport, freight train')) &
+        (LCI_sheet_modify['location'].eq('GLO')),
+        ['location', 'name']
+    ] = ['GLO', 'market group for transport, freight, train, fleet average']
+
+    LCI_sheet_modify.loc[
+        (LCI_sheet_modify['name'].eq('market group for transport, freight, inland waterways, barge')) &
+        (LCI_sheet_modify['location'].eq('GLO')),
+        ['location', 'name']
+    ] = ['GLO', 'market group for transport, freight, inland waterways, barge, diesel']
+
+    LCI_sheet_modify.loc[
+        (LCI_sheet_modify['name'].eq('market for transport, freight, sea, container ship')) &
+        (LCI_sheet_modify['location'].eq('GLO')),
+        ['location', 'name']
+    ] = ['GLO', 'market for transport, freight, sea, container ship, heavy fuel oil']
+
+    LCI_sheet_modify.loc[
+        (LCI_sheet_modify['name'].eq('market group for transport, freight, lorry, unspecified')) &
+        (LCI_sheet_modify['location'].eq('GLO')),
+        ['location', 'name']
+    ] = ['GLO', 'market group for transport, freight, lorry, diesel, unspecified']
+
+    LCI_sheet_modify.loc[
+        (LCI_sheet_modify['name'].eq('transport, freight, lorry, unspecified, long haul')) &
+        (LCI_sheet_modify['location'].eq('World')),
+        ['location', 'name']
+    ] = ['RER', 'transport, freight, lorry, all sizes, EURO 6 to generic market for transport, freight, lorry, unspecified']  # or RoW, check region of original process
+
+    LCI_sheet_modify.loc[
+        (LCI_sheet_modify['name'].eq('market for oxygen, liquid')) &
+        (LCI_sheet_modify['location'].eq('RoW')),
+        'location'
+    ] = 'RER'
+
+    LCI_sheet_modify['categories'] = LCI_sheet_modify['categories'].str.replace(
+        r".*water.*surface water.*", "water::surface water",
+        regex=True
+    )
+
+    LCI_sheet_modify.loc[
+        (LCI_sheet_modify['name'].eq('market for transport, freight train')) &
+        (LCI_sheet_modify['location'].eq('RoW')),
+                                       ['location', 'name']
+         ] =['RoW', 'market for transport, freight, train, fleet average'] # check if location RoW correct
+
+    LCI_sheet_modify.loc[
+        (LCI_sheet_modify['name'].eq('market for electric arc furnace converter')) &
+        (LCI_sheet_modify['location'].eq('GLO')),
+                                       ['location', 'name']
+         ] =['RoW', 'market for electric arc furnace']
+
+
+    LCI_sheet_modify['name'] = LCI_sheet_modify['name'].str.replace(
+         'market for lime', 'market for limestone, milled, loose',
+         )
+
+    LCI_sheet_modify['name'] = LCI_sheet_modify['name'].str.replace(
+         'market for limestone, milled, loosestone, crushed, washed', 'market for limestone, crushed, washed',
+         )
+
+
+    LCI_sheet_modify['name'] = LCI_sheet_modify['name'].str.replace(
+         'market for scrap steel', 'market for waste steel',
+         )
+
+    LCI_sheet_modify['name'] = LCI_sheet_modify['name'].str.replace(
+         'Transformation, from forest', 'Transformation, from forest, unspecified',
+         )
+         
+    LCI_sheet_modify['categories'] = LCI_sheet_modify['categories'].str.replace(
+        r".*natural resource.*land.*", "natural resource::land",
+        regex=True
+    )
+
+    LCI_sheet_modify['name'] = LCI_sheet_modify['name'].str.replace(
+         'Particulate Matter > 10 um', 'Particulate Matter, > 10 um',
+         )
+
+    LCI_sheet_modify['categories'] = LCI_sheet_modify['categories'].str.replace(
+        r".*air.*", "air::",
+    )
+
+    LCI_sheet_modify['categories'] = LCI_sheet_modify['categories'].str.replace(
+        r".*natural resource.*in ground.*", "natural resource::in ground",
+        regex=True
+    )
+
+    LCI_sheet_modify.loc[
+        (LCI_sheet_modify['name'].eq('market for polyethylene, high density, granulate')) &
+        (LCI_sheet_modify['location'].eq('GLO')),
+        'location'
+    ] = 'RER'
+
+    LCI_sheet_modify.loc[
+        (LCI_sheet_modify['name'].eq('market for methyl acrylate')) &
+        (LCI_sheet_modify['location'].eq('GLO')),
+        'location'
+    ] = 'RER'
+
+    LCI_sheet_modify.loc[
+        (LCI_sheet_modify['name'].eq('market for electric arc furnace')) &
+        (LCI_sheet_modify['location'].eq('RoW')),
+        'location'
+    ] = 'GLO'
+
 
     return LCI_sheet_modify
 
@@ -363,7 +532,7 @@ def set_location(LCI_sheet_modify):
     Returns:
         pd.DataFrame: Modified DataFrame with standardized locations
     """
-
+    LCI_sheet_modify['location'] = LCI_sheet_modify['location'].astype(str)
     LCI_sheet_modify.loc[LCI_sheet_modify['ORIGIN'].isin(['EUR', 'EU']), 'location'] = 'RER'
 
     # If no entry is provided guess that is RER
