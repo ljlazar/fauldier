@@ -251,6 +251,12 @@ def ecoinvent_3_12_names(LCI_sheet_modify):
         'location'
     ] = 'GLO'
 
+    LCI_sheet_modify.loc[
+        (LCI_sheet_modify['name'].eq('market for polyethylene, low density, granulate')) &
+        (LCI_sheet_modify['location'].eq('GLO')),
+        'location'
+    ] = 'RER'
+
 
     return LCI_sheet_modify
 
