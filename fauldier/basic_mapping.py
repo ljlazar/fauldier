@@ -532,7 +532,8 @@ def set_location(LCI_sheet_modify):
     Returns:
         pd.DataFrame: Modified DataFrame with standardized locations
     """
-    LCI_sheet_modify['ORIGIN'] = LCI_sheet_modify['ORIGIN'].astype(str)
+    LCI_sheet_modify['ORIGIN'] = LCI_sheet_modify['ORIGIN'].astype('string')
+    LCI_sheet_modify['location'] = LCI_sheet_modify['location'].astype('string')
     LCI_sheet_modify.loc[LCI_sheet_modify['ORIGIN'].isin(['EUR', 'EU']), 'location'] = 'RER'
 
     # If no entry is provided guess that is RER
