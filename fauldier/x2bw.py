@@ -19,7 +19,7 @@ def x2bw_transformation(activity_database_name,
                         LLM_mapping=False,
                         BG_DB_activities=[],
                         biosphere_flows=[],
-                        ecoinvent_version='3.10',
+                        ecoinvent_version='3.12',
                         ):
     """
     Convert spreadsheets to Brightway2 input format with optional LLM-based mapping.
